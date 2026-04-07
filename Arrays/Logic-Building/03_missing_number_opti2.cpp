@@ -4,6 +4,7 @@ using namespace std;
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
+        // xor of same numbers is always zero
         int xor1 = 0, xor2 = 0;
         for (int i = 0; i < nums.size(); i++) {
             xor1 = xor1 ^ (i + 1);

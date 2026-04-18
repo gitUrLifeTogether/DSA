@@ -1,11 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-
-    int lowerBound(vector<int>& nums,
-                   int x) {
+    int lowerBound(vector<int> &nums, int x)
+    {
 
         int low = 0;
 
@@ -13,19 +13,21 @@ public:
 
         int ans = nums.size();
 
-        while(low <= high) {
+        while (low <= high)
+        {
 
-            int mid =
-            low + (high - low) / 2;
+            int mid = (low + high) / 2;
 
-            if(nums[mid] >= x) {
+            if (nums[mid] >= x)
+            {
 
                 ans = mid;
 
                 high = mid - 1;
             }
 
-            else {
+            else
+            {
 
                 low = mid + 1;
             }
@@ -35,14 +37,15 @@ public:
     }
 };
 
-int main() {
+int main()
+{
 
     int n;
     cin >> n;
 
     vector<int> nums(n);
 
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
         cin >> nums[i];
 
     int x;
@@ -50,8 +53,20 @@ int main() {
 
     Solution sol;
 
-    cout << sol.lowerBound(nums,
-                           x);
+    cout << sol.lowerBound(nums, x);
 
     return 0;
 }
+
+/* using the STL fn to find the lower bound
+int lowerBound(vector<int>& nums,
+                   int x) {
+
+        int lb =
+        lower_bound(nums.begin(),
+                    nums.end(),
+                    x)
+        - nums.begin();
+
+        return lb;
+    } */

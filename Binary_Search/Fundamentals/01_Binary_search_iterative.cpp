@@ -1,25 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-
-    int search(vector<int>& nums,
-               int target) {
+    int search(vector<int> &nums,
+               int target)
+    {
 
         int low = 0;
 
         int high = nums.size() - 1;
 
-        while(low <= high) {
+        while (low <= high)
+        {
 
-            int mid =
-            low + (high - low) / 2;
+            int mid =low + (high ) / 2;
+                // use low + (high-low) /2 in case of overflow
 
-            if(nums[mid] == target)
+            if (nums[mid] == target)
                 return mid;
 
-            else if(nums[mid] < target)
+            else if (nums[mid] < target)
                 low = mid + 1;
 
             else
@@ -30,14 +32,15 @@ public:
     }
 };
 
-int main() {
+int main()
+{
 
     int n;
     cin >> n;
 
     vector<int> nums(n);
 
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
         cin >> nums[i];
 
     int target;

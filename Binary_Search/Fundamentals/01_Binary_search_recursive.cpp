@@ -1,53 +1,45 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
+    int binarySearch(vector<int> &nums, int low, int high, int target)
+    {
 
-    int binarySearch(vector<int>& nums,
-                     int low,
-                     int high,
-                     int target) {
-
-        if(low > high)
+        if (low > high)
             return -1;
 
-        int mid = low + (high - low) / 2;
+        int mid =low + (high ) / 2;
+                // use low + (high-low) /2 in case of overflow
 
-        if(nums[mid] == target)
+        if (nums[mid] == target)
             return mid;
 
-        else if(nums[mid] < target)
-            return binarySearch(nums,
-                                mid + 1,
-                                high,
-                                target);
+        else if (nums[mid] < target)
+            return binarySearch(nums, mid + 1, high, target);
 
         else
-            return binarySearch(nums,
-                                low,
-                                mid - 1,
-                                target);
+            return binarySearch(nums, low, mid - 1, target);
     }
 
-    int search(vector<int>& nums,
-               int target) {
+    int search(vector<int> &nums,
+               int target)
+    {
 
-        return binarySearch(nums,
-                            0,
-                            nums.size() - 1,
-                            target);
+        return binarySearch(nums, 0, nums.size() - 1, target);
     }
 };
 
-int main() {
+int main()
+{
 
     int n;
     cin >> n;
 
     vector<int> nums(n);
 
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
         cin >> nums[i];
 
     int target;

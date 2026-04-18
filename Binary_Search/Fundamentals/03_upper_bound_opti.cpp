@@ -1,10 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-
-    int upperBound(vector<int>& nums,int x) {
+    int upperBound(vector<int> &nums, int x)
+    {
 
         int low = 0;
 
@@ -12,18 +13,21 @@ public:
 
         int ans = nums.size();
 
-        while(low <= high) {
+        while (low <= high)
+        {
 
-            int mid =(low + high) / 2;
+            int mid = (low + high) / 2;
 
-            if(nums[mid] > x) {
+            if (nums[mid] > x)
+            {
 
                 ans = mid;
 
                 high = mid - 1;
             }
 
-            else {
+            else
+            {
 
                 low = mid + 1;
             }
@@ -33,14 +37,15 @@ public:
     }
 };
 
-int main() {
+int main()
+{
 
     int n;
     cin >> n;
 
     vector<int> nums(n);
 
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
         cin >> nums[i];
 
     int x;
@@ -52,3 +57,10 @@ int main() {
 
     return 0;
 }
+
+/* using STL fn to find upper bound
+int upperBound(vector<int> &nums, int x){
+
+     int up=upper_bound(nums.begin(),nums.end(),x)-nums.begin();
+     return up;
+    } */

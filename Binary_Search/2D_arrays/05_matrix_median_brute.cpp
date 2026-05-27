@@ -3,9 +3,9 @@ using namespace std;
 
 class Solution {
 public:
-    // Function to find the median of a row-wise sorted matrix
+   
     int findMedian(vector<vector<int>>& matrix) {
-        // Step 1: Flatten the matrix into a single list
+        
         vector<int> flattened;
         for (auto& row : matrix) {
             for (int val : row) {
@@ -13,10 +13,9 @@ public:
             }
         }
 
-        // Step 2: Sort the flattened list
         sort(flattened.begin(), flattened.end());
 
-        // Step 3: Return the middle element
+    
         int n = flattened.size();
         return flattened[n / 2];
     }

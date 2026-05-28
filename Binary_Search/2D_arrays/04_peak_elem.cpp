@@ -59,13 +59,12 @@ public:
             }
         }
         
-        // Return {-1, -1} if no peak element is found
         return {-1, -1};  
     }
 };
 
 int main() {
-    // Example usage
+   
     vector<vector<int>> mat = {
         {4, 2, 5, 1, 4, 5},
         {2, 9, 3, 2, 3, 2},
@@ -73,10 +72,9 @@ int main() {
         {3, 6, 2, 3, 7, 2}
     };
     
-    // Create an instance of Solution class
     Solution sol;
     
-    // Call findPeakGridfunction and print the result
+
     vector<int> peak = sol.findPeakGrid(mat);
     cout << "The row of peak element is " << peak[0] << " and column of the peak element is " << peak[1] << endl;
     

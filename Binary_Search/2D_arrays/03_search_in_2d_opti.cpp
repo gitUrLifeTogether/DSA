@@ -13,7 +13,7 @@ public:
         //Traverse the matrix from (0, m-1):
         while (row < n && col >= 0) {
             
-            //Return true of target is found
+            
             if (matrix[row][col] == target) return true;
             else if (matrix[row][col] < target) row++;
             else col--;

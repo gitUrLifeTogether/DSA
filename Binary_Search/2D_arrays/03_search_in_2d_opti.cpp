@@ -18,7 +18,7 @@ public:
             else if (matrix[row][col] < target) row++;
             else col--;
         }
-        //Return false if target not found
+        
         return false;
     }
 };

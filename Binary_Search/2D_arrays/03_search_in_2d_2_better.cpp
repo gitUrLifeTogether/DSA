@@ -49,7 +49,7 @@ int main() {
                                   {18, 21, 23, 26, 30}};
     int target = 8;
     
-    //Create an instace of Solution class
+  
     Solution sol;
     
     bool result = sol.searchMatrix(matrix, target);

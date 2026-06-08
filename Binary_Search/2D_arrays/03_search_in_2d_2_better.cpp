@@ -54,7 +54,7 @@ int main() {
     
     bool result = sol.searchMatrix(matrix, target);
     
-    // Output the result
+    
     result ? cout << "true\n" : cout << "false\n";
     
     return 0;

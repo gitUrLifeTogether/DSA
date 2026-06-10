@@ -29,8 +29,7 @@ public:
         //Traverse through each row
         for (int i = 0; i < n; i++) {
             
-            /*Check if target is 
-            present in the current row*/
+            
             bool flag =  binarySearch(matrix[i], target);
             
             if (flag) return true;

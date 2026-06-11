@@ -34,7 +34,6 @@ public:
             
             if (flag) return true;
         }
-        // Return false if target is not found
         return false; 
     }
 };

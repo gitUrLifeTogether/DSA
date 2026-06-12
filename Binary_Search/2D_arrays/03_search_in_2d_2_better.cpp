@@ -26,7 +26,7 @@ public:
         int n = matrix.size();
         int m = matrix[0].size();
         
-        //Traverse through each row
+       
         for (int i = 0; i < n; i++) {
             
             

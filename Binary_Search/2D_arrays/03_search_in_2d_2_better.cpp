@@ -21,7 +21,6 @@ private:
         return false;
 }
 public:
-    //Function to search for a given target in matrix
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
         int n = matrix.size();
         int m = matrix[0].size();

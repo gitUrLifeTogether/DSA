@@ -8,7 +8,7 @@ private:
         int n = nums.size(); 
         int low = 0, high = n - 1;
 
-        // Perform the steps:
+        
         while (low <= high) {
             int mid = (low + high) / 2;
             
@@ -17,7 +17,7 @@ private:
             else if (target > nums[mid]) low = mid + 1;
             else high = mid - 1;
         }
-        //Return false if target not found
+        
         return false;
 }
 public:

@@ -3,7 +3,7 @@ using namespace std;
 
 class Solution {
 private:
-    //Helper function to perform binary search
+    
     bool binarySearch(vector<int>& nums, int target) {
         int n = nums.size(); 
         int low = 0, high = n - 1;

@@ -12,7 +12,6 @@ private:
         while (low <= high) {
             int mid = (low + high) / 2;
             
-            //Return true if target is found
             if (nums[mid] == target) return true;
             else if (target > nums[mid]) low = mid + 1;
             else high = mid - 1;

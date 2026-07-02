@@ -23,6 +23,9 @@ public:
     }
 };
 
+// TC- O(n^2) - In the worst case, we have to make n passes through the array, and for each pass, we have to compare adjacent elements, which takes O(n) time. Therefore, the overall time complexity is O(n^2).
+// SC- O(1) - The space complexity of the bubble sort algorithm is O(1) because it sorts the array in place.
+
 int main() {
 
     int n;

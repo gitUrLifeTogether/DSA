@@ -23,6 +23,8 @@ public:
         return nums;
     }
 };
+// TC- O(n^2) - In the worst case, we have to make n passes through the array, and for each pass, we have to find the minimum element in the remaining unsorted array, which takes O(n) time. Therefore, the overall time complexity is O(n^2).
+// SC- O(1) - The space complexity of the selection sort algorithm is O(1) because it sorts the array in place.
 
 int main() {
 

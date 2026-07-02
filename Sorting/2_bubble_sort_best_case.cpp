@@ -9,7 +9,7 @@ public:
 
         for(int i = n - 1; i >= 0; i--) {
 
-            bool didSwap = false;
+            bool didSwap = false; // variable to track if any swaps were made in the current pass
 
             for(int j = 0; j <= i - 1; j++) {
 
@@ -17,17 +17,19 @@ public:
 
                     swap(nums[j], nums[j + 1]);
 
-                    didSwap = true;
+                    didSwap = true; // update variable if any swaps were done.
                 }
             }
 
             if(!didSwap)
-                break;
+                break; // break out of the loop if no swaps were made, indicating that the array is already sorted.
         }
 
         return nums;
     }
-};
+        // TC- O(n) - In the best case, when the array is already sorted, we only need to make one pass through the array, which takes O(n) time. 
+        // SC- O(1) - The space complexity of the bubble sort algorithm is O(1) because it sorts the array in place.
+    };
 
 int main() {
 

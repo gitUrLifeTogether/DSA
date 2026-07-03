@@ -12,7 +12,8 @@ public:
 
             int key = nums[i]; // store the current element to be inserted in the sorted portion of the array
 
-            int j = i - 1; // initialize j to the index of the last element in the sorted portion of the array
+            int j = i - 1; 
+            // initialize j to the index of the last element in the sorted portion of the array
 
             // inner loop for finding the correct position to insert the current element
             while(j >= 0 && nums[j] > key) {

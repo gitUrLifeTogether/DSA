@@ -89,5 +89,6 @@ int main() {
 
     return 0;
 }
+
 // TC- O(nlogn) - for all cases, since we are dividing the array into two halves and merging them back together.
 // SC- O(n) - The space complexity is O(n) because we are using a temporary vector to store the merged elements.
